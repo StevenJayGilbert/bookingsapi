@@ -532,7 +532,7 @@ function bookingsapi_conflict_check( $record, $includePotentials = FALSE,
         }
       } 
       // This schedule is NOT available. Save it as unavailable or exit
-      if ( ! ($s <= $startU && $e >= $end) ) {
+      if ( ! ($s <= $startU && $e >= $endU) ) {
         $return = BOOKINGSAPI_CONFLICTS_CONFLICT;
         if ( is_array($listArray) ) {
           $lisArray[] = $timeLeft;
